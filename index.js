@@ -25,6 +25,23 @@ var api = new ParseServer({
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
+var ParseDashboard = require('parse-dashboard');
+ 
+var dashboard = new ParseDashboard({
+  "apps": [
+    {
+      appId: process.env.APP_ID || 'myAppId',
+      masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+      serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+      appName:  process.env.APP_ID || 'myAppId',
+    }
+  ]
+});
+ 
+ 
+// make the Parse Dashboard available at /dashboard
+app.use('/dashboard', dashboard);
+
 var app = express();
 
 // Serve static assets from the /public folder

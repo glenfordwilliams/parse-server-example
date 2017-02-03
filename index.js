@@ -37,18 +37,7 @@ var dashboard = new ParseDashboard({
       appName:  process.env.APP_ID || 'myAppId',
     }
   ],
-  "users": [
-    {
-      "user":process.env.USER || "user",
-      "pass":process.env.PASS ||"pass"
-    },
-    {
-      "user":"user",
-      "pass":"pass"
-    }, 
-  ],
   "trustProxy": 1, 
-  "useEncryptedPasswords": true,
 }, allowInsecureHTTP);
  
  

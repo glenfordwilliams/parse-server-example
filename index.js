@@ -43,8 +43,8 @@ var dashboard = new ParseDashboard({
       "pass":process.env.PASS ||"pass"
     }, 
   ],
-  "trustProxy": 1 
-  "useEncryptedPasswords": true | false
+  "trustProxy": 1, 
+  "useEncryptedPasswords": true | false,
 }, allowInsecureHTTP);
  
  

@@ -40,9 +40,9 @@ var dashboard = new ParseDashboard({
  
  
 // make the Parse Dashboard available at /dashboard
-app.use('/dashboard', dashboard);
 
 var app = express();
+app.use('/dashboard', dashboard);
 
 // Serve static assets from the /public folder
 app.use('/public', express.static(path.join(__dirname, '/public')));

@@ -26,7 +26,7 @@ var api = new ParseServer({
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
 var ParseDashboard = require('parse-dashboard');
- var allowInsecureHTTP = true;
+ var allowInsecureHTTP = false;
 
 var dashboard = new ParseDashboard({
   "apps": [

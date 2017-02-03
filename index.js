@@ -39,13 +39,10 @@ var dashboard = new ParseDashboard({
   ],
   "users": [
     {
-      "user":"kanersan@gmail.com",
-      "pass":"banana"
+      "user":process.env.USER,
+      "pass":process.env.PASS
     },
-    {
-      "user":"grantarp@yahoo.com",
-      "pass":"12345"
-    }
+    
   ],
   "trustProxy": 1, 
 }, allowInsecureHTTP);

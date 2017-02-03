@@ -36,7 +36,15 @@ var dashboard = new ParseDashboard({
       serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
       appName:  process.env.APP_ID || 'myAppId',
     }
-  ]
+  ],
+  "users": [
+    {
+      "user":process.env.USER || "user",
+      "pass":process.env.PASS ||"pass"
+    },
+      "trustProxy": 1   
+  ],
+  "useEncryptedPasswords": true | false
 }, allowInsecureHTTP);
  
  
